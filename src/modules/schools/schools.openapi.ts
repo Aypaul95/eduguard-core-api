@@ -1,4 +1,3 @@
-//import { registry } from "../../shared/docs/registry";
 import { registry } from "../../config/openapi";
 import { z } from "zod";
 

@@ -246,10 +246,14 @@ model Student {
   admissionNo String
   firstName   String
   lastName    String
+  middleName  String?
   gender      String
   dateOfBirth DateTime?
+  phoneNumber String?
+  email       String?
   photoUrl    String?
   status      String    @default("ACTIVE")
+  isActive    Boolean   @default(true)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
