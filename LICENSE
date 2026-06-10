@@ -1,0 +1,63 @@
+EduGuard Revenue & Academic Intelligence API
+Copyright (c) 2026 EduGuard Systems
+
+All Rights Reserved.
+
+IMPORTANT NOTICE
+
+This software and associated documentation files (the "Software") are the exclusive property of EduGuard Systems.
+
+You are NOT permitted to:
+
+- Copy, modify, merge, publish, distribute, sublicense, or sell the Software
+- Use the Software in any commercial product without explicit written permission
+- Reverse engineer, decompile, or disassemble the Software
+- Remove or alter any proprietary notices
+
+PERMITTED USE
+
+You may:
+
+- Use this software internally within a licensed organization (if a license has been purchased)
+- Run the API in production only under a valid EduGuard license agreement
+- Modify the software only for internal, non-distributed usage
+
+MULTI-SCHOOL SaaS RESTRICTION
+
+This software is designed for controlled multi-school deployment only.
+
+Each school(school, institution, or organization) must have:
+
+- A valid API key issued by EduGuard Systems
+- A signed commercial agreement
+- Usage within approved quota limits
+
+NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+EduGuard Systems is not liable for:
+
+- Data loss
+- Revenue loss
+- System downtime
+- Misuse of the API
+- Integration failures
+
+COMMERCIAL LICENSE REQUIRED
+
+To obtain a commercial license, contact:
+
+Email: licensing@eduguard.ai
+
+TERMINATION
+
+Any violation of this license will result in:
+
+- Immediate termination of access
+- Revocation of API keys
+- Possible legal action
+
+GOVERNING LAW
+
+This license shall be governed by the laws of the Federal Republic of Nigeria.
