@@ -1,3 +1,4 @@
+import "./config/bootstrap";
 import express, { Application, Request, Response, NextFunction } from "express";
 import routes from "./routes";
 import helmet from "helmet";
