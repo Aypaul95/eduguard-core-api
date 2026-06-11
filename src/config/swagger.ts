@@ -4,7 +4,7 @@ import "../modules/auth/auth.openapi";
 import "../modules/schools/schools.openapi";
 import "../modules/students/students.openapi";
 import "../modules/parents/parents.openapi";
-// import "../modules/classes/classes.openapi";
+import "../modules/classes/classes.openapi";
 // import "../modules/billing/billing.openapi";
 // import "../modules/fees/fees.openapi";
 // import "../modules/payments/payments.openapi";

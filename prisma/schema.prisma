@@ -289,6 +289,10 @@ model Class {
   id        String   @id @default(uuid())
   schoolId  String
   name      String // e.g. JSS1, SS2, Grade 5
+  description String?
+  gradeLevel  String?
+  capacity    Int?
+  isActive    Boolean  @default(true)
   createdAt DateTime @default(now())
 
   school      School       @relation(fields: [schoolId], references: [id])
@@ -304,6 +308,7 @@ model Enrollment {
   studentId    String
   classId      String
   academicYear String? // e.g. 2025/2026
+  isCurrent    Boolean @default(true)
   createdAt    DateTime @default(now())
 
   student Student @relation(fields: [studentId], references: [id])
