@@ -65,6 +65,19 @@ enum NotificationType {
   IN_APP
 }
 
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+  EXCUSED
+}
+
+enum StudentFeeAssignmentStatus {
+  UNPAID
+  PARTIAL
+  PAID
+}
+
 // =============================================================
 // PART 1 — MULTI-SCHOOL CORE: School + RBAC + Auth
 // =============================================================
@@ -503,7 +516,7 @@ model StudentFeeAssignment {
   id             String   @id @default(uuid())
   studentId      String
   feeStructureId String
-  status         String   @default("UNPAID")
+  status StudentFeeAssignmentStatus @default(UNPAID)
   createdAt      DateTime @default(now())
 
   student      Student      @relation(fields: [studentId], references: [id])

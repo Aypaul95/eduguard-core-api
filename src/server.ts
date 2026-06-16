@@ -1,3 +1,4 @@
+//src/server.ts
 import http from "http";
 import dotenv from "dotenv";
 import app from "./app"; // we will assume app.ts exists (clean architecture entry)

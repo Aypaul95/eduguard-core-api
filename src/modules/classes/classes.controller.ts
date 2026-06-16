@@ -79,25 +79,29 @@ export class ClassesController {
         }
     };
 
-    /** NOTE: AM UNABLE TO CALL THIS ENDPOINT. KEEPS GIVING ME ERROR
+    /**
      * GET SINGLE CLASS
-     * GET /api/v1/classes/:classId 
+     * GET /api/v1/classes/:classId
      */
-    getClassById = async (req: Request, res: Response) => {
+    async getClassById(req: Request, res: Response) {
         const classIdRaw = req.params.classId;
+        const schoolIdRaw = req.user?.schoolId || req.query.schoolId;
 
-        const classId = Array.isArray(classIdRaw)
-            ? classIdRaw[0]
-            : classIdRaw;
+        // ✅ Normalize classId
+        const classId =
+            Array.isArray(classIdRaw) ? classIdRaw[0] : classIdRaw;
 
+        // ✅ Normalize schoolId
+        const schoolId =
+            Array.isArray(schoolIdRaw) ? schoolIdRaw[0] : schoolIdRaw;
+
+        // ❌ Strict validation (NO undefined allowed)
         if (!classId) {
             throw new AppError("classId is required", 400);
         }
 
-        const schoolId = req.user?.schoolId;
-
         if (!schoolId) {
-            throw new AppError("Unauthorized: missing school context", 401);
+            throw new AppError("schoolId is required", 400);
         }
 
         const classData = await this.classesService.getClassById({
@@ -109,8 +113,8 @@ export class ClassesController {
             success: true,
             data: classData,
         });
-    };
-    /** NOTE: AM UNABLE TO CALL THIS ENDPOINT. KEEPS GIVING ME ERROR SAME ERROR AS ABOVE
+    }
+    /**
      * UPDATE CLASS
      * PATCH /api/v1/classes/:classId
      */
