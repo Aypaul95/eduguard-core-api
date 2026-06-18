@@ -7,6 +7,7 @@ import { parentsRouter } from "../modules/parents/parents.routes";
 import classesRoutes from "../modules/classes/classes.routes";
 import { createFeesRoutes } from "../modules/fees/fees.routes";
 import billingRoutes from "../modules/billing/billing.routes";
+import { createPaymentsRoutes } from "../modules/payments/payments.routes";
 import { PrismaClient } from "@prisma/client"; // 👈 add this
 
 const prisma = new PrismaClient(); // 👈 add this
@@ -22,10 +23,10 @@ router.use("/parents", parentsRouter);
 router.use("/classes", classesRoutes);
 router.use("/fees", createFeesRoutes(prisma)); // ✅ call it with prisma
 router.use("/billing", billingRoutes);
+router.use("/payments", createPaymentsRoutes(prisma));
 // later you will add:
 //router.use("/attendance", attendanceRoutes);
 // router.use("/fees", feesRoutes);
-// router.use("/payments", paymentsRoutes);
 // router.use("/revenue", revenueRoutes);
 
 
