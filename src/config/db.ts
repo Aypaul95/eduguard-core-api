@@ -1,5 +1,7 @@
+//src/config/db.ts
 import { PrismaClient } from "@prisma/client";
 import { env } from "./env";
+import { decodeBase64 } from "bcryptjs";
 
 /**
  * Global Prisma Type

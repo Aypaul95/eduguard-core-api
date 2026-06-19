@@ -9,6 +9,7 @@ import "../modules/classes/classes.openapi";
 import "../modules/fees/fees.openapi";
 import "../modules/billing/billing.openapi";
 import "../modules/payments/payments.openapi";
+import "../modules/revenue/revenue.openapi";
 //import "../modules/attendance/attendance.openapi"
 
 
